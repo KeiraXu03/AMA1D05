@@ -101,15 +101,11 @@ Actor-Critic methods use two models: one to generate the policy (actor) and anot
 ##### Formulas and Functions
 - **Action Function (Actor)**:
  $`
-  \[
   \pi(a|s, \theta) \text{, where }\theta \text{ are the parameters of the actor network}
-  \]
 `$
 - **Value Function (Critic)**:
 $`
-  \[
   V^\pi(s) \text{, approximated by the critic network}
-  \]
 `$
 - **Actor Loss**:
 $`
