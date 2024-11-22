@@ -67,12 +67,7 @@ Deep Q-Learning integrates the classic Q-learning technique with deep neural net
  $`
   
 - **Action Selection**: In DQN, action selection is managed by an ε-greedy policy, which mixes exploration and exploitation to improve learning. The exploration rate is dynamically adjusted as follows:
-$$
-  \[
-  \text{exploration} = \text{decay\_rate}^{(\text{epoch} / 5)}
-  \]
-$$
-  This lets the exploration rate decrease as the number of epochs increases, leading to a better balance of exploration and exploitation.
+$`\[\text{exploration} = \text{decay\_rate}^{(\text{epoch} / 5)}\] `$ This lets the exploration rate decrease as the number of epochs increases, leading to a better balance of exploration and exploitation.
   
   Actions are then chosen based on:
 $$
