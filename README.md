@@ -120,6 +120,6 @@ $`
 $`
   L(w) = \left(r + \gamma V(s', w) - V(s, w)\right)^2
 `$
-  Where $`\( w \)`$ are the parameters of the critic network.
+  Where $`( w )`$ are the parameters of the critic network.
 
 These methods provide robust frameworks for solving complex reinforcement learning problems, particularly in environments with large or continuous state and action spaces. The results with different epochs are shown in the attached folder.
