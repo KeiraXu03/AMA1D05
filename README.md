@@ -62,33 +62,33 @@ Deep Q-Learning integrates the classic Q-learning technique with deep neural net
 ##### Formulas and Functions
 - **Q-value Update Rule**:
   
-   $$
+$$
    Q(s_t, a_t) \leftarrow Q(s_t, a_t) + \alpha \left( r_{t+1} + \gamma \max_a Q(s_{t+1}, a) - Q(s_t, a_t) \right)
-   $$
+$$
   
 - **Action Selection**: In DQN, action selection is managed by an ε-greedy policy, which mixes exploration and exploitation to improve learning. The exploration rate is dynamically adjusted as follows:
-  $$
+$$
   \[
   \text{exploration} = \text{decay\_rate}^{(\text{epoch} / 5)}
   \]
-  $$
+$$
   This lets the exploration rate decrease as the number of epochs increases, leading to a better balance of exploration and exploitation.
   
   Actions are then chosen based on:
-  $$
+$$
   \[
   a_t = \begin{cases} 
   \text{random action} & \text{with probability } \epsilon \\
   \arg\max_a Q(s_t, a) & \text{with probability } 1-\epsilon
   \end{cases}
   \]
-  $$
+$$
 - **Loss Function**:
-  $$
+$$
   \[
   \text{Loss} = \left(r + \gamma \max_{a'}Q(s', a') - Q(s, a)\right)^2
   \]
-  $$
+$$
 
 #### b. Actor-Critic
 
@@ -105,28 +105,28 @@ Actor-Critic methods use two models: one to generate the policy (actor) and anot
 
 ##### Formulas and Functions
 - **Action Function (Actor)**:
-  $$
+$$
   \[
   \pi(a|s, \theta) \text{, where }\theta \text{ are the parameters of the actor network}
   \]
-  $$
+$$
 - **Value Function (Critic)**:
-  $$
+$$
   \[
   V^\pi(s) \text{, approximated by the critic network}
   \]
-  $$
+$$
 - **Actor Loss**:
-  $$
+$$
   \[
   L(\theta) = -\log(\pi(a|s, \theta)) \cdot A(s, a)
   \]
-  $$
+$$
   Where $\( A(s, a) \)$ is the advantage function, computed as $\( r + \gamma V(s') - V(s) \)$.
 - **Critic Loss**:
-  $
+$
   L(w) = \left(r + \gamma V(s', w) - V(s, w)\right)^2
-  $
+$
   Where $\( w \)$ are the parameters of the critic network.
 
 These methods provide robust frameworks for solving complex reinforcement learning problems, particularly in environments with large or continuous state and action spaces. The results with different epochs are shown in the attached folder.
