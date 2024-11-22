@@ -62,9 +62,9 @@ Deep Q-Learning integrates the classic Q-learning technique with deep neural net
 ##### Formulas and Functions
 - **Q-value Update Rule**:
   
-$$
+ $`
    Q(s_t, a_t) \leftarrow Q(s_t, a_t) + \alpha \left( r_{t+1} + \gamma \max_a Q(s_{t+1}, a) - Q(s_t, a_t) \right)
-$$
+ $`
   
 - **Action Selection**: In DQN, action selection is managed by an ε-greedy policy, which mixes exploration and exploitation to improve learning. The exploration rate is dynamically adjusted as follows:
 $$
