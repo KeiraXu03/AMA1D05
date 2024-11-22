@@ -38,12 +38,12 @@ In terms of performance with the same parameters (e.g., hidden layer=100, epoch=
      ![Table 5: Explanation for Action](label.png "Optional Title")
    - **Reward**: Compared with the last feature of the NSL-KDD dataset. If the action matches the corresponding label value, the agent receives a reward of 1; otherwise, the reward is 0.
      
-     $$
+$$
      R(s, a) = \begin{cases} 
      1 & \text{if action = label} \\
      0 & \text{otherwise}
      \end{cases}
-     $$
+$$
 
    - **State Transition**:
      There is no strict state transition equation; training proceeds sequentially from top to bottom of the database (i.e., if St is the i-th row of data, then St+1 is the i+1-th row).
